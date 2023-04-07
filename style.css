@@ -1,0 +1,269 @@
+:root {
+    box-sizing: border-box;
+    color: #0E1014;
+    font-family: Georgia;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    color: #282828;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #957915;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.layout-container {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    background: #FFFEF9;
+}
+
+.layout-header {
+    padding: 23px;
+    background: #FFFEF9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    
+}
+
+.layout-header > .layout-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.layout-nav > ul {
+    list-style: none;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.layout-nav > ul > li {
+    margin-left: 16px;
+}
+
+.layout-nav > ul > li:first-child {
+    margin-left: 0;
+}
+
+.layout-nav > ul > li > a {
+    font-weight: bold;
+    border-radius: 8px;    
+    display: block;
+
+    padding: 6px 0px 6px 0px;
+}
+
+.layout-nav > ul > li> a:hover,
+.layout-nav > ul > li:hover > a {
+    background: #FFFEF9;
+    color: #957915;
+}
+
+.layout-nav > ul > .dropdown {
+    position: relative;
+}
+
+.layout-nav > ul > .dropdown:hover > .dropdown-wrapper {
+    display: block;
+    background-color: #FFFEF9;
+}
+
+.dropdown-wrapper {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 120;
+    padding-top: 23px;
+}
+
+.dropdown-menu {
+    background: #FFF9E2;
+    padding: 8px;
+    list-style: none;
+    margin: 0;
+    border-radius: 8px;
+    min-width: 180px;
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.dropdown-menu > li > a:hover {
+    background: #FFFEF9;
+
+}
+
+.layout-contend {
+    margin-top: 125px;
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 60px 20px;
+
+    margin: 100px 0;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px 20px;
+}
+
+.article-grid > article {
+    position: relative;
+}
+
+.section-header h2 {
+    font-size: 48px;
+    line-height: 1.13625;
+    font-family: Georgia;
+    position: sticky;
+    top: 99px;
+    z-index: 50;
+}
+
+.article-image {
+    position: relative;
+}
+
+.article-comments {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 55px;
+    height: 55px;
+    z-index: 30;
+    padding: 9px;
+    background: #F5CC3B;
+    border-radius: 9000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-comments .icon {
+    margin-right: 6px;
+}
+
+.article-comments .counter {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.3125;
+}
+
+.article-info {
+    margin-top: 4px;
+}
+
+.article-title {
+    font-size: 18px;
+    line-height: 1.333333;
+    margin: 4px 4px;
+}
+
+.article-date {
+    color: #424141;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.75;
+    font-weight: bold;
+}
+
+.article-link::after {
+    content: '';
+
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.article-tags {
+    columns: #282828;
+    font-size: 16px;
+    line-height: 1.875;
+    display: flex;
+    margin: -4px;
+    flex-flow: row wrap;
+}
+
+.article-tags > .tag {
+    border: 1px solid #F5CC3B;
+    border-radius: 8px;
+    padding: 2px 11px 2px 11px;
+    margin: 8px;
+}
+
+.article-grid > .wide {
+    grid-column-end: span 2;
+}
+
+.wide .article-title {
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.article {
+    grid-column-end: span 2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.article .article-info {
+    margin-top: 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+}
+
+.article .article-title {
+    flex: 1 0 auto;
+}
